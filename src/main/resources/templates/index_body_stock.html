@@ -1,0 +1,115 @@
+<div class="container mypanel" id="index-body-stock">
+    <!--
+     作者: lwh
+     时间: 2020.7.15
+     描述：库存管理
+    -->
+    <div class="mypanel-header">
+        <div class="media">
+            <div class="media-left">
+                <img src="../static/src/list.png" th:src="@{/src/list.png}" alt="商品列表">
+            </div>
+            <div class="media-right">
+                <h2 class="media-heading" id="stock-title-text">商品列表</h2>
+            </div>
+        </div>
+        <div class="selectionArea">
+            <form class="form-inline" id="stock-selectForm">
+                <fieldset>
+                    <legend>根据条件筛选（支持品牌/品名/品牌+品名/品牌+品名+型号/品牌+品名+型号+规格搜索）</legend>
+                    <div class="form-group">
+                        <label for="select-brandInput">品牌</label>
+                        <input type="text" class="form-control input-sm" id="select-brandInput" placeholder="请输入品牌名">
+                    </div>
+                    <div class="form-group">
+                        <label for="select-nameInput">品名</label>
+                        <input type="text" class="form-control input-sm" id="select-nameInput" placeholder="请输入产品名">
+                    </div>
+                    <div class="form-group">
+                        <label for="select-modelInput">型号</label>
+                        <input type="text" class="form-control input-sm" id="select-modelInput" placeholder="请输入产品型号">
+                    </div>
+                    <div class="form-group">
+                        <label for="select-standardInput">规格</label>
+                        <input type="text" class="form-control input-sm" id="select-standardInput"
+                               placeholder="请输入产品规格">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">查询</button>
+                    <button type="button" class="btn btn-primary btn-sm">所有</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="mypanel-title-content-split"></div>
+    <div class="mypanel-content well">
+        <table class="table table-hover" id="allCommodities-table">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>品牌</th>
+                <th>品名</th>
+                <th>型号</th>
+                <th>规格</th>
+                <th>库存</th>
+                <th>单价/元</th>
+                <th>操作</th>
+                <th>进价/元</th>
+            </tr>
+            </thead>
+        </table>
+        <div class="text-center" id="noCommodityTip">当前没有商品!</div>
+    </div>
+    <div class="modal fade" id="updateCinfoModal" tabindex="-1" role="dialog" aria-labelledby="updateCinfoModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="updateCinfoModalLabel"><strong>更改商品信息</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <form id="updateCinfoForm">
+                        <fieldset>
+                            <legend>商品编号</legend>
+                            <div class="form-group">
+                                <label for="update-brandInput">品牌</label>
+                                <input type="text" class="form-control" id="update-brandInput" name="update-brandInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-nameInput">品名</label>
+                                <input type="text" class="form-control" id="update-nameInput" name="update-nameInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-modelInput">型号</label>
+                                <input type="text" class="form-control" id="update-modelInput" name="update-modelInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-standardInput">规格</label>
+                                <input type="text" class="form-control" id="update-standardInput"
+                                       name="update-standardInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-stockInput">库存</label>
+                                <input type="text" class="form-control" id="update-stockInput" name="update-stockInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-opriceInput">单价/元</label>
+                                <input type="text" class="form-control" id="update-opriceInput"
+                                       name="update-opriceInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="update-ipriceInput">进价/元</label>
+                                <input type="text" class="form-control" id="update-ipriceInput"
+                                       name="update-ipriceInput">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

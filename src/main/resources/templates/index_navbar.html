@@ -1,0 +1,55 @@
+<div id="index-navbar">
+    <!--
+     作者: lwh
+     时间: 2020.7.15
+     描述: index导航条
+    -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="btn navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div>
+                    <a href="javascript:void(0)" class="navbar-brand">
+                        <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                    </a>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:void(0)">库存管理</a></li>
+                    <li><a href="javascript:void(0)">销售记录</a></li>
+                    <li><a href="javascript:void(0)">商品入库</a></li>
+                    <li><a href="javascript:void(0)">购物车</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user left" aria-hidden="true"></span>
+                            <span id="index-navbar-adminName">&nbsp;管理员&nbsp;</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0)" onclick="logout()">
+                                    <div>
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;退出登录
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>

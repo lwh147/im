@@ -1,0 +1,55 @@
+<div class="container mypanel" id="index-body-add">
+    <!--
+     作者: lwh
+     时间: 2020.7.15
+     描述：商品入库
+    -->
+    <div class="mypanel-header">
+        <div class="media">
+            <div class="media-left">
+                <img src="../static/src/instore.png" th:src="@{/src/instore.png}" alt="商品入库">
+            </div>
+            <div class="media-right">
+                <h2 class="media-heading" id="add-title-text">商品入库</h2>
+            </div>
+        </div>
+    </div>
+    <div class="mypanel-title-content-split"></div>
+    <div class="mypanel-content well">
+        <form id="addForm">
+            <fieldset>
+                <legend><strong>商品信息</strong></legend>
+                <div class="form-group">
+                    <label for="brandInput">品牌</label>
+                    <input type="text" class="form-control" id="brandInput" name="brandInput">
+                </div>
+                <div class="form-group">
+                    <label for="nameInput">品名</label>
+                    <input type="text" class="form-control" id="nameInput" name="nameInput">
+                </div>
+                <div class="form-group">
+                    <label for="modelInput">型号</label>
+                    <input type="text" class="form-control" id="modelInput" name="modelInput">
+                </div>
+                <div class="form-group">
+                    <label for="standardInput">规格</label>
+                    <input type="text" class="form-control" id="standardInput" name="standardInput">
+                </div>
+                <div class="form-group">
+                    <label for="stockInput">库存</label>
+                    <input type="text" class="form-control" id="stockInput" name="stockInput">
+                </div>
+                <div class="form-group">
+                    <label for="ipriceInput">进价/元</label>
+                    <input type="text" class="form-control" id="ipriceInput" name="ipriceInput">
+                </div>
+                <div class="form-group">
+                    <label for="opriceInput">单价/元</label>
+                    <input type="text" class="form-control" id="opriceInput" name="opriceInput">
+                </div>
+                <button type="submit" class="btn btn-primary" id="addButton">添加</button>
+                <button type="button" class="btn btn-default" id="resetButton">重置</button>
+            </fieldset>
+        </form>
+    </div>
+</div>

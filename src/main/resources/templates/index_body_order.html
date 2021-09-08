@@ -1,0 +1,70 @@
+<div class="container mypanel" id="index-body-order">
+    <!--
+     作者: lwh
+     时间: 2020.7.16
+     描述: 销售记录
+    -->
+    <div class="mypanel-header">
+        <div class="media">
+            <div class="media-left">
+                <img src="../static/src/record.png" th:src="@{/src/record.png}" alt="销售记录">
+            </div>
+            <div class="media-right">
+                <h2 class="media-heading" id="order-title-text">销售记录</h2>
+            </div>
+        </div>
+        <div id="totalIncome">总收入：？元</div>
+        <div class="selectionArea">
+            <form class="form-inline" id="getOrderByInfo">
+                <fieldset>
+                    <legend>根据订单编号筛选</legend>
+                    <div class="form-group">
+                        <label for="oidInput"></label>
+                        <input type="text" class="form-control input-sm" id="oidInput" placeholder="请输入订单编号">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm">查询</button>
+                </fieldset>
+                <fieldset>
+                    <legend>根据备注信息筛选</legend>
+                    <div class="form-group">
+                        <label for="keywordsInput"></label>
+                        <input type="text" class="form-control input-sm" id="keywordsInput" placeholder="请输入关键词">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm">查询</button>
+                </fieldset>
+            </form>
+            <form class="form-inline" id="getOrderByTime">
+                <fieldset>
+                    <legend>根据时间筛选</legend>
+                    <div class="form-group">
+                        <label for="timeInput"></label>
+                        <input type="date" class="form-control input-sm" id="timeInput">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm">查询</button>
+                    <button type="button" class="btn btn-primary btn-sm">最近一周</button>
+                    <button type="button" class="btn btn-primary btn-sm">最近一月</button>
+                    <button type="button" class="btn btn-primary btn-sm">最近一年</button>
+                    <button type="button" class="btn btn-primary btn-sm">所有</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="mypanel-title-content-split"></div>
+    <div class="mypanel-content well">
+        <table class="table table-hover" id="allOrders-table">
+            <thead>
+            <tr>
+                <th>订单编号</th>
+                <th>时间</th>
+                <th>商品列表</th>
+                <th>优惠/元</th>
+                <th>合计/元</th>
+                <th>本单毛收入/元</th>
+                <th>备注</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+        <div class="text-center" id="noOrderTip">当前没有记录!</div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!--
+ 作者: lwh
+ 时间: 2020.7.15
+-->
+<!DOCTYPE html>
+<!-- 此处采用了html原生的引入方式并结合thymeleaf的引入方式：
+    1.html原生的引入方式:相对路径，方便直接打开html进行设计.
+    2.thymeleaf的引入方式:动态生成引入路径(相当于Jsp的老方法${pageContext.request.contextPath})，
+方便部署到服务器中运行时自动获取引入的静态资源路径而不用考虑静态资源匹配路径static-path-pattern.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置页面初始化大小和缩放值 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 页面标题 -->
+    <title>首页 — 商品出入库管理系统</title>
+    <!-- 引入网页图标 -->
+    <link rel="icon" href="../static/src/icon.png" th:href="@{/src/icon.png}" sizes="32x32">
+    <!-- 引入bootstrap默认css样式 -->
+    <link rel="stylesheet" href="../static/extlib/bootstrap-3.3.7/css/bootstrap.min.css"
+          th:href="@{/extlib/bootstrap-3.3.7/css/bootstrap.min.css}">
+    <!-- 引入bootstrapValidator默认css样式 -->
+    <link rel="stylesheet" href="../static/extlib/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css"
+          th:href="@{/extlib/bootstrapvalidator-0.5.3/css/bootstrapValidator.min.css}">
+    <!-- 引入jquery和bootstrap的js插件 -->
+    <!-- 注意：因为bootstrap和bootstrapValidator的js插件使用了jquery，所以jquery的引用必须放到bootstrap的js插件引用之前 -->
+    <script type="text/javascript" src="../static/extlib/jquery-3.4.1/jquery-3.4.1.min.js"
+            th:src="@{/extlib/jquery-3.4.1/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" src="../static/extlib/bootstrap-3.3.7/js/bootstrap.min.js"
+            th:src="@{/extlib/bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" src="../static/extlib/bootstrapvalidator-0.5.3/js/bootstrapValidator.min.js"
+            th:src="@{/extlib/bootstrapvalidator-0.5.3/js/bootstrapValidator.min.js}"></script>
+    <!-- 引入自己的css库文件-->
+    <link rel="stylesheet" href="../static/css/reusable.min.css" th:href="@{/css/reusable.min.css}">
+    <link rel="stylesheet" href="../static/css/index.min.css" th:href="@{/css/index.min.css}">
+    <link rel="stylesheet" href="../static/css/index_navbar.min.css" th:href="@{/css/index_navbar.min.css}">
+    <link rel="stylesheet" href="../static/css/index_foot.min.css" th:href="@{/css/index_foot.min.css}">
+    <link rel="stylesheet" href="../static/css/index_body_stock.min.css" th:href="@{/css/index_body_stock.min.css}">
+    <link rel="stylesheet" href="../static/css/index_body_add.min.css" th:href="@{/css/index_body_add.min.css}">
+    <link rel="stylesheet" href="../static/css/index_body_order.min.css" th:href="@{/css/index_body_order.min.css}">
+    <link rel="stylesheet" href="../static/css/index_body_cart.min.css" th:href="@{/css/index_body_cart.min.css}">
+    <!-- 引入自己的js库文件 -->
+    <script type="text/javascript" src="../static/js/reusable.min.js" th:src="@{/js/reusable.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index.js" th:src="@{/js/index.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index_navbar.min.js" th:src="@{/js/index_navbar.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index_body_stock.min.js"
+            th:src="@{/js/index_body_stock.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index_body_add.min.js"
+            th:src="@{/js/index_body_add.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index_body_order.min.js"
+            th:src="@{/js/index_body_order.min.js}"></script>
+    <script type="text/javascript" src="../static/js/index_body_cart.min.js"
+            th:src="@{/js/index_body_cart.min.js}"></script>
+</head>
+<body>
+<!-- 网页基本容器-->
+<div class="container-fluid">
+    <!-- 网页上部导航栏容器 -->
+    <div class="row" id="index-navbar-container">
+        <!-- 动态加载 -->
+    </div>
+    <!-- 网页主体容器 -->
+    <div class="row" id="index-body-container">
+        <!-- 动态加载 -->
+    </div>
+    <!-- 页脚 -->
+    <div class="row" id="index-foot-container">
+        <!-- 动态加载 -->
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<div class="container mypanel" id="index-body-cart">
+    <!--
+     作者: lwh
+     时间: 2020.7.16
+     描述: 购物车
+    -->
+    <div class="mypanel-header">
+        <div class="media">
+            <div class="media-left">
+                <img src="../static/src/cart.png" th:src="@{/src/cart.png}" alt="购物车">
+            </div>
+            <div class="media-right">
+                <h2 class="media-heading" id="cart-title-text">购物车</h2>
+            </div>
+        </div>
+        <div class="countArea">
+            <div id="totaldiscount">— 优惠：？</div>
+            <div id="totalprice">合计：？元</div>
+            <button class="btn btn-primary" onclick="purchase()" id="purchase">结算</button>
+        </div>
+    </div>
+    <div class="mypanel-title-content-split"></div>
+    <div class="mypanel-content well">
+        <table class="table table-hover" id="cart-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>商品信息</th>
+                <th>数量</th>
+                <th>单价/元</th>
+                <th>折扣</th>
+                <th>小计/元</th>
+                <th>优惠/元</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+        <div class="text-center" id="cartEmptyTip">您的购物车竟然是空的!</div>
+        <div id="markInputArea">
+            <label for="markInput">订单备注：</label>
+            <textarea id="markInput" name="markInput" placeholder="特殊情况"></textarea>
+        </div>
+    </div>
+</div>

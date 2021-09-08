@@ -1,0 +1,64 @@
+<!--
+ 作者: lwh
+ 时间: 2020.7.19
+-->
+<!DOCTYPE html>
+<!-- 此处采用了html原生的引入方式并结合thymeleaf的引入方式：
+    1.html原生的引入方式:相对路径，方便直接打开html进行设计.
+    2.thymeleaf的引入方式:动态生成引入路径(相当于Jsp的老方法${pageContext.request.contextPath})，
+方便部署到服务器中运行时自动获取引入的静态资源路径而不用考虑静态资源匹配路径static-path-pattern.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置页面初始化大小和缩放值 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 页面标题 -->
+    <title>打印预览 — 商品出入库管理系统</title>
+    <!-- 引入网页图标 -->
+    <link rel="icon" href="../static/src/icon.png" th:href="@{/src/icon.png}" sizes="32x32">
+    <!-- 引入bootstrap默认css样式 -->
+    <link rel="stylesheet" href="../static/extlib/bootstrap-3.3.7/css/bootstrap.min.css"
+          th:href="@{/extlib/bootstrap-3.3.7/css/bootstrap.min.css}">
+    <!-- 引入jquery和bootstrap的js插件 -->
+    <!-- 注意：因为bootstrap和bootstrapValidator的js插件使用了jquery，所以jquery的引用必须放到bootstrap的js插件引用之前 -->
+    <script type="text/javascript" src="../static/extlib/jquery-3.4.1/jquery-3.4.1.min.js"
+            th:src="@{/extlib/jquery-3.4.1/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" src="../static/extlib/bootstrap-3.3.7/js/bootstrap.min.js"
+            th:src="@{/extlib/bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+    <!-- 引入自己的css库文件-->
+    <link rel="stylesheet" href="../static/css/reusable.min.css" th:href="@{/css/reusable.min.css}">
+    <link rel="stylesheet" href="../static/css/porder.min.css" th:href="@{/css/porder.min.css}">
+    <!-- 引入自己的js库文件 -->
+    <script type="text/javascript" src="../static/js/reusable.min.js" th:src="@{/js/reusable.min.js}"></script>
+    <script type="text/javascript" src="../static/js/porder.min.js" th:src="@{/js/porder.min.js}"></script>
+</head>
+<body>
+<div id="order-container">
+    <div id="order-title">商店名</div>
+    <div id="order-basic">
+        <div id="order-id">订单编号：id</div>
+        <div id="order-time">时间：time</div>
+    </div>
+    <div id="order-detail">
+        <table class="table table-bordered" id="order-detail-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>商品信息</th>
+                <th>数量</th>
+                <th>单价/元</th>
+                <th>折扣</th>
+                <th>小计/元</th>
+                <th>优惠/元</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="order-foot">
+        <div id="order-foot-address">地址：地址</div>
+        <div id="order-foot-phone">联系电话：电话1 电话2</div>
+    </div>
+</div>
+</body>
+</html>

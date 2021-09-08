@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.mapper.CommodityMapper">
+    <!--查-->
+    <select id="getAllCommodities" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+    </select>
+    <select id="getCommodityByAll" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+        where brand = #{brand}
+          and name = #{name}
+          and model = #{model}
+          and standard = #{standard}
+    </select>
+    <select id="getCommodityByBrandNameModel" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+        where brand = #{brand}
+          and name = #{name}
+          and model = #{model}
+    </select>
+    <select id="getCommodityByBrandName" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+        where brand = #{brand}
+          and name = #{name}
+    </select>
+    <select id="getCommodityByBrand" parameterType="String" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+        where brand = #{brand}
+    </select>
+    <select id="getCommodityByName" parameterType="String" resultType="com.im.entity.Commodity">
+        select *
+        from commodity
+        where name = #{name}
+    </select>
+
+    <!--增-->
+    <insert id="addNewCommodity">
+        insert into commodity(cid, brand, name, model, standard, stock, iprice, oprice)
+        values (#{cid}, #{brand}, #{name}, #{model}, #{standard}, #{stock}, #{iprice}, #{oprice})
+    </insert>
+
+    <!--改-->
+    <update id="updateCommodityInfo">
+        update commodity
+        set brand    = #{newbrand},
+            name     = #{newname},
+            model    = #{newmodel},
+            standard = #{newstandard},
+            stock    = #{newstock},
+            oprice   = #{newoprice},
+            iprice   = #{newiprice}
+        where cid = #{cid}
+    </update>
+
+    <!--删-->
+    <delete id="deleteCommodityByID" parameterType="String">
+        delete
+        from commodity
+        where cid = #{cid}
+    </delete>
+</mapper>

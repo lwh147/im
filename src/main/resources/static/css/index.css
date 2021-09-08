@@ -1,0 +1,16 @@
+/**
+ * 作者: lwh
+ * 时间: 2020.7.15
+ * 描述：页面定制样式
+ */
+
+/*页面主体*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*空出导航栏位置*/
+#index-body-container {
+    padding-top: 51px;
+}

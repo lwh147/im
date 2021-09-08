@@ -1,0 +1,41 @@
+/**
+ * 作者: lwh
+ * 时间: 2020.7.15
+ * 描述：可复用css样式，基于bootstrap
+ */
+
+/**
+ * 样式中使用的颜色
+ * 背景色: white
+ * 主题色：#428bca
+ */
+
+/****************************验证信息颜色**********************/
+.has-error .form-control-feedback {
+    color: #cd4f4d;
+}
+
+.has-error .help-block {
+    color: #cd4d4b;
+}
+
+.has-error .control-label {
+    color: #cd4c4a;
+}
+
+.has-success .form-control-feedback {
+    color: #3d9b68;
+}
+
+.has-success .help-block {
+    color: #3d9b68;
+}
+
+.has-success .control-label {
+    color: #3d9b68;
+}
+
+/*表头字体*/
+.table thead tr th {
+    font-size: 18px;
+}
